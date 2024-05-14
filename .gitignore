@@ -1,0 +1,12 @@
+/.vs
+/ClientOne/x64
+/ClientTwo/x64
+/FastIpcLib/x64
+/FastIpcTest/x64
+/ServerTest/x64
+/x64
+/ClientOne/ClientOne.vcxproj.user
+/ClientTwo/ClientTwo.vcxproj.user
+/FastIpcLib/FastIpcLib.vcxproj.user
+/FastIpcTest/FastIpcTest.vcxproj.user
+/ServerTest/ServerTest.vcxproj.user

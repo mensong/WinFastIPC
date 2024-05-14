@@ -2,12 +2,6 @@
 #include <tchar.h>
 #include <stdio.h>
 
-#ifdef _DEBUG
-#pragma comment(lib,"../Debug/FastIpcLib.lib")
-#else
-#pragma comment(lib,"../Release/FastIpcLib.lib")
-#endif // _DEBUG
-
 #define IpcChannel  _T("MyTestIpcChannel")
 
 CRITICAL_SECTION cs;
@@ -22,7 +16,7 @@ BOOL WINAPI TestIpcRoutine(
 	)
 {
 	EnterCriticalSection(&cs);
-	wprintf_s(L"[%llu] %s\n", ++Counter, MessageBuf);
+	wprintf_s(L"[%llu] %s\n", ++Counter, (wchar_t*)MessageBuf);
 	*((BOOL*)AnswerBuf) = rand() % 2 == 1;
 	LeaveCriticalSection(&cs);
 	return TRUE;

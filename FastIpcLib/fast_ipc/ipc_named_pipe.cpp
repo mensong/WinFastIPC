@@ -302,6 +302,8 @@ IpcWaitConnectClient(IN PNAMED_PIPE NamedPipe,
             {
                 break;
             }
+
+            Sleep(1);
         }
     }
 

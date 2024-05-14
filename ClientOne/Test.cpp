@@ -2,12 +2,6 @@
 #include <tchar.h>
 #include <stdio.h>
 
-#ifdef _DEBUG
-#pragma comment(lib,"../Debug/FastIpcLib.lib")
-#else
-#pragma comment(lib,"../Release/FastIpcLib.lib")
-#endif // _DEBUG
-
 #define IpcChannel  _T("MyTestIpcChannel")
 
 
