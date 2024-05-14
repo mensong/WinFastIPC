@@ -15,17 +15,17 @@ public:
     // Connection
     //
     void ClosePipe();
-    void CreatePipe(const std::string &PipeName);
-    void ConnectToLocalPipe(const std::string &PipeName);
-    void ConnectToPipe(const std::string &PipeName);
+    bool CreatePipe(const std::string &PipeName, UINT PipeBufferSize = 100000);
+    bool ConnectToLocalPipe(const std::string &PipeName);
+    bool ConnectToPipe(const std::string &PipeName);
 
     //
     // Messaging
     //
     bool MessagePresent();
     bool ReadMessage(std::string &strRead);
-    void PipeSendMessage(const BYTE *Message, UINT MessageLength);
-	void PipeSendMessage(const std::string &Message);
+    bool PipeSendMessage(const BYTE *Message, UINT MessageLength);
+	bool PipeSendMessage(const std::string &Message);
 
     //
     // Query
